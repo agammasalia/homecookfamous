@@ -1,0 +1,12 @@
+body {
+	padding-top: 60px;
+	padding-bottom: 50px;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.modal-backdrop {
+	z-index: 0;
+}
