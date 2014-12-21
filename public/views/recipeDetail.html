@@ -1,5 +1,8 @@
 <div ng-app="homecookfamous" ng-controller="RecipeDetailCtrl">
-	<h2 class="capitalize">{{recipes[0].name}}<button class="pull-right btn btn-primary" onclick="javascript:printDiv('printablediv')">Print this page</button></h2>
+	<h2 class="capitalize">{{recipes[0].name}}
+		<button class="pull-right btn btn-primary" onclick="javascript:printDiv('printablediv')">Print Recipe</button>
+		<button class="pull-right btn btn-primary" onclick="javascript:downloadRecipe()">Download Recipe</button>
+	</h2>
 	<div id="printablediv" class="container-fluid">
 		<br><center><img ng-src='/images/recipe/{{recipes[0].id}}.jpg' width="50%" max-height="200px"></center><br>
 		<div class="row">

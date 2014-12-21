@@ -1,5 +1,7 @@
 <div ng-app="homecookfamous" ng-controller="CountryCtrl">
-	<h2 class="capitalize" style="color:#428bca;">{{title}}</h2>
+	<h2 class="capitalize" style="color:#428bca;">{{title}}
+		<button class="pull-right btn btn-primary" onclick="javascript:downloadCountry()">Download Recipes</button>
+	</h2>
 	<div class="container-fluid">
 		<div class="row">
 			<div ng-repeat-start="country in countries">

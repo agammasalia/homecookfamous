@@ -32,6 +32,59 @@
 			window.print();
 			document.body.innerHTML = oldPage;
 		}
+		function downloadRecipe() {
+			$.ajax({
+				type:'GET',
+				url: window.location.pathname+'/pdf'
+			})
+			.success(function(data, status, headers, config) {
+				var element = angular.element('<a/>');
+				element.attr({
+					href: './output.pdf',
+					target: '_blank',
+					download:'HomeCookFamous.pdf'
+				})[0].click();
+			})
+		}
+		function downloadCategory() {
+			$.ajax({
+				type:'GET',
+				url: window.location.pathname+'/pdf'
+			})
+			.success(function(data, status, headers, config) {
+				var element = angular.element('<a/>');
+				element.attr({
+					href: './output.pdf',
+					target: '_blank',
+					download:'HomeCookFamous.pdf'
+				})[0].click();
+			})
+		}
+		function downloadCountry() {
+			$.ajax({
+				type:'GET',
+				url: window.location.pathname+'/pdf'
+			})
+			.success(function(data, status, headers, config) {
+				var element = angular.element('<a/>');
+				element.attr({
+					href: './output.pdf',
+					target: '_blank',
+					download:'HomeCookFamous.pdf'
+				})[0].click();
+			})
+		}
+		function searchRecipe() {
+			var searchInput = $('#searchTxt').val();
+			$.ajax({
+				type:'GET',
+				url: '/search',
+				data: { search : searchInput }
+			})
+			.success(function(data, status, headers, config) {
+				console.log(data);
+			})
+		}
 	</script>
 	<script>
 		$(function() {
